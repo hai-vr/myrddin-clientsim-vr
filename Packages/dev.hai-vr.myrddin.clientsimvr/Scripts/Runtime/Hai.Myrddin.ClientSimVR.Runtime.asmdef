@@ -2,7 +2,8 @@
   "name": "Hai.Myrddin.ClientSimVR.Runtime",
   "references": [
     "VRC.ClientSim",
-    "Unity.InputSystem"
+    "Unity.InputSystem",
+    "Hai.Myrddin.Core.Runtime"
   ],
   "includePlatforms": [],
   "excludePlatforms": [],

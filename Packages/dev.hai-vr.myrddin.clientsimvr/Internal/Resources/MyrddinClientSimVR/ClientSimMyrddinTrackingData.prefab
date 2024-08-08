@@ -778,6 +778,7 @@ MonoBehaviour:
   playspace: {fileID: 6173163437471986546}
   playerAudioListener: {fileID: 6277239503601283957}
   playerCamera: {fileID: 1773530945815936483}
+  updateCoordinator: {fileID: 2522030054206945962}
 --- !u!1 &6277239503601283954
 GameObject:
   m_ObjectHideFlags: 0
