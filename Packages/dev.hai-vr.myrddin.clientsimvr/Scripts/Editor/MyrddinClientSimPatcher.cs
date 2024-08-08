@@ -36,10 +36,16 @@ namespace Hai.Myrddin.ClientSimVR.Editor
         {
             if (PlayerPrefs.GetInt("Hai.Myrddin.ClientSimVR") > 0)
             {
-                var myrddinTrackingData = Resources.Load<GameObject>(PrefabPath).GetComponent<ClientSimMyrddinTrackingProvider>();
-                
+                var myrddinTrackingDataPrefab = Resources.Load<GameObject>(PrefabPath).GetComponent<ClientSimMyrddinTrackingProvider>();
+                var myrddinTrackingData = Object.Instantiate(myrddinTrackingDataPrefab);
+                myrddinTrackingData.name = "MyrddinTrackingData";
+
                 var playerTrackingDataField = Field("playerTrackingData");
-                (playerTrackingDataField.GetValue(__instance) as ClientSimTrackingProviderBase).gameObject.SetActive(false);
+                var desktopTrackingData = playerTrackingDataField.GetValue(__instance) as ClientSimTrackingProviderBase;
+
+                myrddinTrackingData.transform.parent = desktopTrackingData.transform.parent;
+                
+                desktopTrackingData.gameObject.SetActive(false);
                 myrddinTrackingData.gameObject.SetActive(true);
                 (Field("reticle").GetValue(__instance) as ClientSimReticle).gameObject.SetActive(false);
                 playerTrackingDataField.SetValue(__instance, myrddinTrackingData);
