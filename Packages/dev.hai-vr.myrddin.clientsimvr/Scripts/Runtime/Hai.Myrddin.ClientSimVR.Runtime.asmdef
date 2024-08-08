@@ -1,0 +1,16 @@
+﻿{
+  "name": "Hai.Myrddin.ClientSimVR.Runtime",
+  "references": [
+    "VRC.ClientSim",
+    "Unity.InputSystem"
+  ],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
+}
